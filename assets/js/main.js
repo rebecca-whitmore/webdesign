@@ -41,3 +41,9 @@ contactForm.addEventListener('submit', async (event) => {
   formStatus.textContent = 'Thank you — your enquiry has been sent. I’ll be in touch soon.';
   submitButton.disabled = false;
 });
+
+const secretModal = document.querySelector('.secret-modal');
+document.querySelector('.secret-star').addEventListener('click', () => secretModal.showModal());
+document.querySelector('.secret-modal-close').addEventListener('click', () => secretModal.close());
+document.querySelector('.secret-cta').addEventListener('click', () => secretModal.close());
+secretModal.addEventListener('click', (event) => { if (event.target === secretModal) secretModal.close(); });
