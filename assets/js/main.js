@@ -5,7 +5,7 @@ const modalContent = document.querySelector('.modal-content');
 const externalPreview = document.querySelector('.modal-external');
 const previewFrame = externalPreview.querySelector('iframe');
 const externalPreviewLink = externalPreview.querySelector('.external-preview-link');
-document.querySelectorAll('.template-card').forEach((card) => card.addEventListener('click', () => {
+document.querySelectorAll('.template-card[data-preview-url]').forEach((card) => card.addEventListener('click', () => {
   modalTitle.textContent = `${card.dataset.template} canvas preview`;
   const isExternal = Boolean(card.dataset.previewUrl);
   modalContent.hidden = isExternal;
