@@ -47,3 +47,7 @@ document.querySelector('.secret-star').addEventListener('click', () => secretMod
 document.querySelector('.secret-modal-close').addEventListener('click', () => secretModal.close());
 document.querySelector('.secret-cta').addEventListener('click', () => secretModal.close());
 secretModal.addEventListener('click', (event) => { if (event.target === secretModal) secretModal.close(); });
+
+const backToTop = document.querySelector('.back-to-top');
+window.addEventListener('scroll', () => backToTop.classList.toggle('is-visible', window.scrollY > 550), { passive: true });
+backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));

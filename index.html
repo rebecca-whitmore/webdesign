@@ -58,6 +58,9 @@
       .secret-modal p { max-width: 510px; margin: 17px 0 24px; color: var(--text); font-size: .88rem; }
       .secret-modal p strong { color: var(--blue); font-family: Inter, sans-serif; }
       @media (max-width: 760px) { .secret-modal { padding: 32px 26px; box-shadow: 7px 7px 0 var(--lime); } }
+      .back-to-top { position: fixed; z-index: 7; right: 22px; bottom: 22px; display: grid; width: 44px; height: 44px; place-items: center; border: 1px solid rgba(255, 255, 255, .5); border-radius: 50%; background: var(--blue); color: #fff; font: 700 1.2rem/1 Inter, sans-serif; cursor: pointer; box-shadow: 0 7px 18px rgba(0, 15, 43, .2); opacity: 0; pointer-events: none; transform: translateY(10px); transition: opacity .2s, transform .2s, background .2s; }
+      .back-to-top.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+      .back-to-top:hover { background: var(--green); }
       .canvas-sample { display: grid; grid-template-columns: 170px minmax(0, 1fr) auto; align-items: center; gap: 34px; max-width: var(--max); margin: 52px auto 0; padding: 30px 34px; background: #e7f0dc; }
       .canvas-sample-number { color: var(--green); font: 800 clamp(3.8rem, 7vw, 6.4rem)/.8 Inter, sans-serif; letter-spacing: -.1em; }
       .canvas-sample h3 { font-size: 1.6rem; }
@@ -125,6 +128,7 @@
     <footer class="site-footer"><div><a class="logo" href="#top"><img src="assets/images/favicon.png" alt="" /><span class="logo-copy"><span>WEB DESIGN</span><small>by Rebecca Whitmore</small></span></a><p>Thoughtful websites for service businesses.</p></div><div><p class="availability"><i></i> Open for new website clients</p><a href="mailto:contact@rebeccawhitmore.com">contact@rebeccawhitmore.com</a><a href="https://www.youtube.com/@rebecca.louise.whitmore" target="_blank" rel="noopener">YouTube ↗</a></div><p class="copyright">© <span id="year"></span> Rebecca Whitmore</p></footer>
     <dialog class="template-modal" aria-labelledby="modal-title"><button class="modal-close" aria-label="Close preview">×</button><div class="modal-browser"><div class="modal-bar"><span></span><span></span><span></span><b id="modal-title">Canvas preview</b></div><div class="modal-content"><p>YOUR NEXT<br />CHAPTER<br /><em>STARTS HERE.</em></p><div></div><small>This is a preview layout. Your content, colours and brand details will make it yours.</small></div><div class="modal-external"><iframe title="Canvas preview" loading="lazy" src="about:blank"></iframe><p><a class="external-preview-link" href="https://websitedemos.net/earth-02/?customize=template" target="_blank" rel="noopener">Open the demo in a new tab ↗</a></p></div></div></dialog>
     <dialog class="secret-modal" aria-labelledby="secret-title"><button class="secret-modal-close" type="button" aria-label="Close secret offer">×</button><p class="eyebrow">YOU FOUND THE HIDDEN STAR ✦</p><h2 id="secret-title">A little extra for the curious.</h2><p>Use code <strong>FOUNDYOU</strong> when you enquire and I’ll add one small interactive feature to your new website at no extra cost—think a pop-up offer, a reveal, or another clever moment that gets visitors clicking.</p><a class="button secret-cta" href="#enquire">Claim your interactive feature <span>↗</span></a></dialog>
+    <button class="back-to-top" type="button" aria-label="Scroll back to top">↑</button>
     <script src="https://forminit.com/sdk/v1/forminit.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
