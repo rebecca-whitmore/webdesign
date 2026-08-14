@@ -34,15 +34,20 @@
       .template-card { flex-basis: 397px; }
       .template-screen { height: auto; aspect-ratio: 397 / 284; padding: 23px; box-shadow: 8px 8px 0 var(--ink); }
       .template-screen small, .template-screen b { display: none; }
-      .template-screen i { margin-top: auto; color: #fff; font: 700 .76rem Inter, sans-serif; letter-spacing: -.01em; }
+      .template-screen i { margin-top: auto; color: var(--blue); font: 700 .76rem Inter, sans-serif; letter-spacing: -.01em; }
       .template-card > strong { margin-top: 20px; font-size: 1.02rem; }
       .template-card > em, .template-tag { display: none; }
-      .canvas-travel .template-screen { background: linear-gradient(135deg, rgba(0, 15, 43, .87), rgba(14, 36, 83, .67)), url('assets/images/travel.jpg') center / cover; }
-      .canvas-pt .template-screen { background: linear-gradient(135deg, rgba(0, 15, 43, .87), rgba(14, 36, 83, .67)), url('assets/images/pt.jpg') center / cover; }
-      .canvas-restaurant .template-screen { background: linear-gradient(135deg, rgba(0, 15, 43, .87), rgba(14, 36, 83, .67)), url('assets/images/restaurant.jpg') center / cover; }
-      .canvas-author .template-screen { background: linear-gradient(135deg, rgba(0, 15, 43, .87), rgba(14, 36, 83, .67)), url('assets/images/author.jpg') center / cover; }
-      .canvas-coach .template-screen { background: linear-gradient(135deg, rgba(0, 15, 43, .87), rgba(14, 36, 83, .67)), url('assets/images/coach.jpg') center / cover; }
-      @media (max-width: 760px) { .template-card { flex-basis: 82vw; } }
+      .canvas-travel .template-screen { background: linear-gradient(135deg, rgba(243, 247, 255, .62), rgba(220, 234, 248, .52)), url('assets/images/travel.jpg') center / cover; }
+      .canvas-pt .template-screen { background: linear-gradient(135deg, rgba(243, 247, 255, .62), rgba(220, 234, 248, .52)), url('assets/images/pt.jpg') center / cover; }
+      .canvas-restaurant .template-screen { background: linear-gradient(135deg, rgba(243, 247, 255, .62), rgba(220, 234, 248, .52)), url('assets/images/restaurant.jpg') center / cover; }
+      .canvas-author .template-screen { background: linear-gradient(135deg, rgba(243, 247, 255, .62), rgba(220, 234, 248, .52)), url('assets/images/author.jpg') center / cover; }
+      .canvas-coach .template-screen { background: linear-gradient(135deg, rgba(243, 247, 255, .62), rgba(220, 234, 248, .52)), url('assets/images/coach.jpg') center / cover; }
+      .canvas-sample { display: grid; grid-template-columns: 170px minmax(0, 1fr) auto; align-items: center; gap: 34px; max-width: var(--max); margin: 52px auto 0; padding: 30px 34px; background: #e7f0dc; }
+      .canvas-sample-number { color: var(--green); font: 800 clamp(3.8rem, 7vw, 6.4rem)/.8 Inter, sans-serif; letter-spacing: -.1em; }
+      .canvas-sample h3 { font-size: 1.6rem; }
+      .canvas-sample p { max-width: 650px; margin: 9px 0 0; color: var(--text); font-size: .82rem; }
+      .canvas-sample .button { white-space: nowrap; }
+      @media (max-width: 760px) { .template-card { flex-basis: 82vw; } .canvas-sample { grid-template-columns: 1fr; gap: 20px; padding: 28px 24px; } .canvas-sample-number { font-size: 4.6rem; } .canvas-sample .button { justify-self: start; } }
       .process-alt { max-width: 1060px; margin: 0 auto 110px; padding: 0 24px; }
       .process-alt-intro { position: relative; max-width: 720px; padding: 36px 42px; background: var(--pale); }
       .process-alt-intro h2 { font-size: clamp(2rem, 3.5vw, 3.45rem); }
@@ -94,6 +99,7 @@
           <button class="template-card canvas-author" data-template="Author" data-preview-url="https://websitedemos.net/bestselling-author-02/?customize=template"><div class="template-screen"><i>View the demo →</i></div><strong>Author</strong></button>
           <button class="template-card canvas-coach" data-template="Coaching" data-preview-url="https://websitedemos.net/relationship-coach-02/?customize=template"><div class="template-screen"><i>View the demo →</i></div><strong>Coaching</strong></button>
         </div><p class="scroll-hint">Scroll to explore <span>→</span></p>
+        <div class="canvas-sample"><strong class="canvas-sample-number">50+</strong><div><h3>Just a small glimpse of what’s possible.</h3><p>There are more than 50 canvases to choose from, each ready to be adapted and personalised. Love the layout of one but work in a completely different industry? That’s absolutely fine—it’s the overall direction that matters. Your colours, fonts and brand details will all be made your own. These are starting points, not fixed designs.</p></div><a class="button" href="#enquire">Find your starting point <span>↗</span></a></div>
       </section>
       <section class="section investment"><div><p class="eyebrow">A SIMPLE INVESTMENT</p><h2>All the essentials, <em>already covered.</em></h2></div><div class="price-card"><p>Website set-up</p><strong>£285</strong><ul><li>Canvas personalised to your industry</li><li>Content and visual refinements</li><li>Mobile-friendly build</li><li>Launch support</li></ul><div class="hosting"><span>Ongoing hosting &amp; care</span><b>£35 <small>/ month</small></b><p>Includes monthly backups and updates.</p></div><p class="currency-note">Based outside the UK? We can discuss a currency option that works for you.</p><a class="button" href="#enquire">Enquire now <span>↗</span></a></div></section>
       <section class="youtube"><div class="youtube-copy"><p class="eyebrow">COME SAY HELLO</p><h2>Useful business chat, straight from my desk to yours.</h2><p>Join me on YouTube for practical guidance on sales, strategy and building a business on your terms.</p><a class="button button-light" href="https://www.youtube.com/@rebecca.louise.whitmore" target="_blank" rel="noopener">Follow on YouTube <span>↗</span></a></div><a class="youtube-image" href="https://www.youtube.com/@rebecca.louise.whitmore" target="_blank" rel="noopener"><img src="assets/images/YT%20banner.png" alt="Rebecca Whitmore's YouTube banner" /><span>▶</span></a></section>
