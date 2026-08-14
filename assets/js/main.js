@@ -10,6 +10,7 @@ document.querySelectorAll('.template-card').forEach((card) => card.addEventListe
   const isExternal = Boolean(card.dataset.previewUrl);
   modalContent.hidden = isExternal;
   externalPreview.classList.toggle('is-active', isExternal);
+  previewFrame.title = `${card.dataset.template} canvas preview`;
   previewFrame.src = isExternal ? card.dataset.previewUrl : 'about:blank';
   externalPreviewLink.href = isExternal ? card.dataset.previewUrl : '#';
   modal.showModal();
