@@ -1,0 +1,10 @@
+{
+  "siteName": "Northstar",
+  "tagline": "Make progress clearer",
+  "contactEmail": "hello@example.com",
+  "navigation": [
+    { "label": "How it works", "href": "#how-it-works" },
+    { "label": "Benefits", "href": "#benefits" },
+    { "label": "Stories", "href": "#testimonials" }
+  ]
+}
