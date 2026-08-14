@@ -4,12 +4,14 @@ const modalTitle = document.querySelector('#modal-title');
 const modalContent = document.querySelector('.modal-content');
 const externalPreview = document.querySelector('.modal-external');
 const previewFrame = externalPreview.querySelector('iframe');
+const externalPreviewLink = externalPreview.querySelector('.external-preview-link');
 document.querySelectorAll('.template-card').forEach((card) => card.addEventListener('click', () => {
   modalTitle.textContent = `${card.dataset.template} canvas preview`;
   const isExternal = Boolean(card.dataset.previewUrl);
   modalContent.hidden = isExternal;
   externalPreview.classList.toggle('is-active', isExternal);
   previewFrame.src = isExternal ? card.dataset.previewUrl : 'about:blank';
+  externalPreviewLink.href = isExternal ? card.dataset.previewUrl : '#';
   modal.showModal();
 }));
 const closeModal = () => { previewFrame.src = 'about:blank'; modal.close(); };
