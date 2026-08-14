@@ -17,6 +17,14 @@
       .logo-copy > span { font-size: 1.12rem; letter-spacing: .01em; }
       .logo small { align-self: flex-start; margin: 5px 0 0 16px; color: var(--green); font: italic 600 .61rem Poppins, sans-serif; letter-spacing: .01em; text-transform: none; }
       .hero-text { max-width: 600px; font-size: 1.16rem; line-height: 1.55; }
+      h1 em { font-style: italic; }
+      .intro-bar { display: block; overflow: hidden; padding: 0; background: linear-gradient(100deg, #000f2b, #062165 52%, #00183d); white-space: nowrap; }
+      .ticker { display: flex; width: max-content; animation: ticker 34s linear infinite; }
+      .ticker-group { display: flex; align-items: center; gap: 32px; padding: 27px 16px; }
+      .ticker-group p { margin: 0; font-size: .86rem; }
+      .ticker-group span { display: inline; color: var(--lime); font-size: 1.5rem; line-height: .6; }
+      @keyframes ticker { to { transform: translateX(-50%); } }
+      @media (prefers-reduced-motion: reduce) { .ticker { animation: none; } }
     </style>
   </head>
   <body>
@@ -34,7 +42,6 @@
           <h1>A website that looks the part <em>and</em> gets to work.</h1>
           <p class="hero-text">Polished, personality-filled websites for service-led businesses.</p>
           <div class="hero-actions"><a class="button" href="#enquire">Start your website <span>↗</span></a><a class="under-link" href="#templates">Browse the templates <span>↓</span></a></div>
-          <p class="price-note"><strong>£285</strong> website set-up + <strong>£35/month</strong> hosting, updates &amp; backups</p>
         </div>
         <div class="hero-visual" aria-label="A sample website layout">
           <span class="star star-one">✦</span><span class="star star-two">✦</span>
@@ -43,7 +50,7 @@
           <p class="visual-caption">Designed with intention.<br />Built to be found.</p>
         </div>
       </section>
-      <section class="intro-bar"><p>Good design should make your business feel <em>more like itself</em>, not like everyone else.</p><span>✦</span><p>Simple, strategic &amp; ready to grow with you.</p></section>
+      <section class="intro-bar" aria-label="Why work with us"><div class="ticker"><div class="ticker-group"><p>Polished, professional design</p><span>✦</span><p>Built to turn visitors into enquiries</p><span>✦</span><p>Fast-loading &amp; mobile-first</p><span>✦</span><p>Done for you, with friendly service</p><span>✦</span><p>Easy to manage after launch</p><span>✦</span></div><div class="ticker-group" aria-hidden="true"><p>Polished, professional design</p><span>✦</span><p>Built to turn visitors into enquiries</p><span>✦</span><p>Fast-loading &amp; mobile-first</p><span>✦</span><p>Done for you, with friendly service</p><span>✦</span><p>Easy to manage after launch</p><span>✦</span></div></div></section>
       <section class="section about" id="how">
         <div class="section-label"><span>01</span> THE SIMPLE ROUTE TO LIVE</div>
         <div class="about-copy"><p class="eyebrow">NO OVERWHELMING BLANK CANVAS</p><h2>A brilliant website doesn’t need to be a big, complicated project.</h2><p>I start with an expertly designed template, then tailor it to your industry, your business and your personality. You get a site that feels made for you—without waiting months for it to arrive.</p><a class="text-link" href="#enquire">Tell me about your business <span>↗</span></a></div>
