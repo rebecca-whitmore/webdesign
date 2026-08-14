@@ -1,10 +1,7 @@
 {
-  "siteName": "Northstar",
-  "tagline": "Make progress clearer",
-  "contactEmail": "hello@example.com",
-  "navigation": [
-    { "label": "How it works", "href": "#how-it-works" },
-    { "label": "Benefits", "href": "#benefits" },
-    { "label": "Stories", "href": "#testimonials" }
-  ]
+  "siteName": "Rebecca Whitmore Web Design",
+  "url": "https://webdesign.rebeccawhitmore.com",
+  "contactEmail": "contact@rebeccawhitmore.com",
+  "youtube": "https://www.youtube.com/@rebecca.louise.whitmore",
+  "pricing": { "websiteSetup": "£285", "monthlyHosting": "£35" }
 }
