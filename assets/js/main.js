@@ -18,4 +18,26 @@ document.querySelectorAll('.template-card').forEach((card) => card.addEventListe
 const closeModal = () => { previewFrame.src = 'about:blank'; modal.close(); };
 document.querySelector('.modal-close').addEventListener('click', closeModal);
 modal.addEventListener('click', (event) => { if (event.target === modal) closeModal(); });
-document.querySelector('[data-contact-form]').addEventListener('submit', (event) => { event.preventDefault(); event.currentTarget.querySelector('.form-status').textContent = 'Thank you — your enquiry is ready to send once the form is connected.'; });
+const contactForm = document.querySelector('[data-contact-form]');
+const formStatus = contactForm.querySelector('.form-status');
+const submitButton = contactForm.querySelector('[type="submit"]');
+const forminit = typeof Forminit !== 'undefined' ? new Forminit() : null;
+
+contactForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  if (!forminit) {
+    formStatus.textContent = 'The form could not load. Please email contact@rebeccawhitmore.com instead.';
+    return;
+  }
+  submitButton.disabled = true;
+  formStatus.textContent = 'Sending your enquiry…';
+  const { error } = await forminit.submit('fkhraaoc993', new FormData(contactForm));
+  if (error) {
+    formStatus.textContent = error.message || 'Something went wrong. Please try again or email contact@rebeccawhitmore.com.';
+    submitButton.disabled = false;
+    return;
+  }
+  contactForm.reset();
+  formStatus.textContent = 'Thank you — your enquiry has been sent. I’ll be in touch soon.';
+  submitButton.disabled = false;
+});
